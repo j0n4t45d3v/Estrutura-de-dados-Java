@@ -12,14 +12,13 @@ public class Fila<T> {
     }
 
     public void add(T value){
-        Node<T> no = new Node<T>(value);
+        Node<T> no = new Node<>(value);
         if(this.head == null){
             this.head = no;
-            this.tail = no;
         }else{
             this.tail.setNext(no);
-            this.tail = no;
         }
+        this.tail = no;
         this.contador ++;
     }
 
